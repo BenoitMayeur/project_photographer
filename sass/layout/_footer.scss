@@ -1,0 +1,91 @@
+.footer_main{
+    background-color: map-get($colors, back_color_footer);
+    padding-top: 6rem;
+    padding-bottom: 15rem;
+    .f_title{
+        margin-top: 1.7rem;
+        margin-bottom: 1.7rem;
+        color: white;
+        font-weight: bold;
+        text-transform: capitalize;
+    }
+    .f_list_icons{
+        margin-top: 1.3rem;
+    }
+    .f_social_icon{
+        color: white;
+        margin-left: 1rem;
+        i{
+            font-size: 1rem;
+        }
+    }
+
+
+    .f_copyright{
+        margin-top: 1rem;
+    }
+    .f_link{
+        color: map-get($colors, color_link);
+        text-decoration: none;
+    }
+    input{
+        margin-top: 0.6rem;
+        width: 85%;
+        height: 3rem;
+        padding-left: 1rem;
+    }
+    button{
+        background-color: map-get($colors, color_link);
+        color: white;
+        border: none;
+        width: 15%;
+        height: 3rem;
+    }
+
+
+}
+
+.f_social_icon:hover, a .f_social_icon:active{
+    color: map-get($colors, color_link);
+    i{
+        -ms-transform: scale(2); 
+        -webkit-transform: scale(2); 
+        transform: scale(2); 
+    }
+
+}
+
+@media (min-width: 768px) {
+
+    .footer_main{
+        padding-bottom: 7rem;
+
+    }
+
+    .f_div{
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    .f_social_icon{
+        margin-left: 0.5rem;
+    }
+    }
+
+
+
+
+}
+
+@media only screen and (min-width: 992px) {
+    .footer_main{
+
+        p:last-child {
+            margin-right: 0;
+        }
+    }
+
+    
+    .f_social{
+        margin-right: 0;
+    }
+    
+}

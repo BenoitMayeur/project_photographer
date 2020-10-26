@@ -1,0 +1,68 @@
+/* Grid system inspired by boostrap */
+
+/////////////////////////////////////
+//For the containers
+/////////////////////////////////////
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+$size-container: (
+  576px : 540px,
+  768px : 720px,
+  992px : 960px,
+  1200px : 1140px
+);
+
+@each $min-width, $max-width in $size-container {
+  @media (min-width: #{$min-width}) {
+    .container {
+      max-width: #{$max-width};
+    }
+  }
+}
+
+////////////////////
+// For the rows
+////////////////////
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+////////////////////
+//For the columns
+////////////////////
+
+$amount-columns: 12;
+
+// To have for instance ".col-12{..."
+
+@for $i from 1 through $amount-columns {
+  .col-#{$i}{
+    flex: 0 0 ((100% / $amount-columns) * $i);
+    max-width: (100% / $amount-columns) * $i;
+  }
+}
+
+// To have for instance ".col-md-12{..."
+
+$size-columns:(
+  768px: md,
+  992px: lg
+);
+
+@each $min-width, $name-size in $size-columns {
+  @media (min-width: #{$min-width}) {
+    @for $i from 1 through $amount-columns {
+      .col-#{$name-size}-#{$i}{
+        flex: 0 0 ((100% / $amount-columns) * $i);
+        max-width: (100% / $amount-columns) * $i;
+      }
+    }
+  }
+}

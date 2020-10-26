@@ -1,0 +1,366 @@
+.m_this_is_me{
+    background-color: map-get($colors, back_color_second);
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+}
+
+.m_cards_projects{
+    @include flex_center_center;
+    flex-direction: column;
+    margin-bottom: 1.8rem;
+
+}
+
+.m_this_is_me_photo, .m_this_is_me_photo_2{
+    border-radius: 5px;
+}
+
+.m_this_is_me_photo_2{
+
+}
+
+.cards_projects_div_img{
+    position: relative;
+}
+
+.m_cards_projects a {
+    color: black;
+    text-decoration: none;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.image_projet{
+    height: 100%;
+    border-radius: 5px;
+}
+
+.avatar_blog{
+    width: 2.5rem;
+    border-radius: 5px;
+}
+
+/************************************************/
+/************ Code for the Overlay **************/
+/************************************************/
+// The images for the portfolio area and the portfolio page have an overlay on hover
+
+
+.overlay {
+    position: absolute;
+    opacity: 0;
+    transition:all .7s ease;
+    border-radius: 10px;
+    @include flex_center_center;
+}
+
+.cards_projects_div_img:hover .overlay {
+    opacity: 1;
+}
+
+
+.cards_projects_div_img:hover .text { // ces lignes ne servent à rien
+    opacity: 1;
+}
+
+/* 
+    To have an overlay that is transparent with a text that is not,
+    set the opacity in the background-color
+*/
+
+.overlay_top{
+    width: 100%;
+    height: 0;
+    top:0;
+    left:0;
+    background-color: rgba(255, 229, 113, 0.603)
+}
+
+.cards_projects_div_img:hover .overlay_top {
+    height: 100%;
+}
+
+
+/****************End code overlay ***************/
+
+
+.m_services{
+    margin-top: 2rem;
+    margin-bottom: 6rem;
+}
+
+.link_details{
+    text-decoration: none;
+
+}
+
+.m_buttons_details{
+    margin-bottom: 5rem;
+}
+
+.m_buttons_discover{
+    width: 50%;
+    height: 3rem;
+    text-transform: uppercase;
+    color: white;
+    margin-top: 2rem;
+    background-image: linear-gradient(to right, map-get($colors, back_color_graduation1) , map-get($colors, back_color_graduation2));
+    @include flex_center_center;
+    font-weight:bold;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.m_buttons_details{
+    width: 50%;
+    height: 3rem;
+    text-transform: uppercase;
+    color: white;
+    margin-top: 2rem;
+    background-image: linear-gradient(to right, map-get($colors, back_color_graduation1) , map-get($colors, back_color_graduation2));
+    @include flex_center_center;
+    font-weight:bold;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.m_services_card{
+    text-align: center;
+    margin-bottom: 3rem;
+    .card_div_logo{
+        margin-top: 2rem;
+        margin-bottom: 2.5rem;
+    }
+    .lnr{
+        font-size: 2rem;
+    }
+    h3{
+        font-weight: bold;
+        font-size: 1.2rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+.m_numbers{
+    background-image: linear-gradient(to right, map-get($colors, back_color_graduation1) , map-get($colors, back_color_graduation2));
+    @include flex_center_center;
+    color: white;
+    padding-top: 8rem;
+    padding-bottom: 7rem;
+}
+
+ .m_numbers_divs{
+     text-align: center;
+     
+     .big_numbers{
+         font-weight: bold;
+         font-size: 2rem;
+     }
+     p{
+        color: white;
+        font-size: 1rem;
+        font-weight: bold;
+        margin-top: 0.4rem;
+        margin-bottom: 3rem;
+     }
+ }
+
+.home_ribbon_bottom{
+    height: 17rem;
+    background-image: linear-gradient(to right, map-get($colors, back_color_graduation1) , map-get($colors, back_color_graduation2));
+    @include flex_center_center;
+}
+
+.m_section_lastest_projects{
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+}
+
+.sub_title_project{
+    color: map-get($colors, color_text);
+    font-weight: bold;
+}
+
+.m_latest_posts{
+    padding-top: 8rem;
+    background-color: map-get($colors, back_color_second);
+}
+
+
+
+.h3_home{
+
+    text-transform: uppercase;
+}
+
+.h2_home{
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 2rem;
+    margin-bottom: 2.5rem;
+}
+
+.m_div_title_section{
+    text-align: center;
+    h3{
+        font-size: 2.5rem;
+        font-weight: 600;
+        text-transform: capitalize;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+    }
+    p{
+        margin-bottom: 5.8rem;
+    }
+}
+
+
+.home_ribbon_bottom_awards{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .img_awards{
+        opacity: 0.6;
+        transition: transform .5s;
+    }
+
+    .img_awards:hover, .img_awards:active{
+        opacity: 1;
+        -ms-transform: scale(1.5); 
+        -webkit-transform: scale(1.5); 
+        transform: scale(1.5); 
+    }
+
+    .award_desktop{
+        display: none;
+    }
+}
+
+.award_smartphone{
+    display: inline;
+}
+
+.latest_posts{
+    margin-bottom: 5rem;
+}
+
+.div_latest_post{
+    margin-bottom: 5rem;
+
+}
+
+.div_latest_posts_description{
+    a{
+        text-decoration: none;
+        color: black;
+    }
+    h4{
+        font-size: 1.4rem;
+        font-weight: 600;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+    }
+}
+
+.div_latest_posts_data{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-bottom: 2px solid rgb(233, 233, 233);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color: map-get($colors, color_text);
+    img{
+        margin-right: 1rem;
+    }
+    time{
+        margin-right: 1rem;
+    }
+    .bubble{
+        margin-left: 1rem;
+    }
+}
+
+.div_latest_posts_data_span{
+    margin-right: auto;
+    color: black;
+}
+
+.div_latest_post{
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+.div_latest_posts_div_img1{
+    min-height: 200px;
+    @include background_image_whole_cover('../images/city-evening.png');
+    border-radius: 5px;
+}
+
+.div_latest_posts_div_img2{
+    min-height: 200px;
+    @include background_image_whole_cover('../images/flowers1.png');
+    border-radius: 5px;
+}
+
+.div_latest_posts_div_img3{
+    min-height: 200px;
+    @include background_image_whole_cover('../images/chocolate1.png');
+    border-radius: 5px;
+}
+
+.m_this_is_me_photo_home{
+    padding: 2rem;
+}
+
+@media (min-width: 768px) {
+
+    .m_services_card{
+        margin-right: 0.5rem;
+    }
+
+    .m_this_is_me{
+        padding-bottom: 0;
+    }
+
+    .h2_home{
+        font-size: 2rem;
+        margin-top: 1.2rem;
+        margin-bottom: 2rem;
+    }
+
+    .m_cards_projects{
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .div_latest_posts_div_img1, .div_latest_posts_div_img2, .div_latest_posts_div_img3{
+        min-height: 170px;
+    }
+
+    .home_ribbon_bottom{
+        height: 13rem;
+        padding-left: 7%;
+        padding-right: 7%;
+    }
+    .home_ribbon_bottom_awards{
+        .img_awards{
+            width: 10%;
+        }
+        .award_desktop{
+            display: inline;
+        }
+    }
+
+    .m_this_is_me_photo_home{
+        padding: 4rem;
+    }
+
+    
+}
+

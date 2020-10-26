@@ -1,0 +1,30 @@
+// The SASS files are cut in 3 folders:
+// - base: grid, variables (with mixin) and reset
+// - layout: header, footer, aside (there is the same aside on two pages) 
+//              AND general (for instance the CSS for the html, strong, img tags)
+// - pages: the css for each page
+// 
+
+@import "base/grid";
+
+@import "base/variables";
+
+@import "base/reset";
+
+@import "layout/header";
+
+@import "layout/general";
+
+@import "layout/aside";
+
+@import "layout/footer";
+
+@import "pages/home";
+
+@import "pages/about";
+
+@import "pages/blog";
+
+@import "pages/contact";
+
+@import "pages/article";

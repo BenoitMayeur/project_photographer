@@ -1,0 +1,238 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
+// There is an aside on two pages: blog and article, so I put this file "aside.scss" in the layout folder
+
+.asside_blog{
+    border: 1px rgba(194, 194, 194, 0.432) solid;
+    margin-bottom: 5rem;
+    p{
+        text-align: center;
+    }
+    .form_search_post{
+        @include flex_center_center;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        margin-top: 4rem;
+        margin-bottom: 2rem; 
+        .input_search_posts, .button_search_post{
+            height: 3rem;
+            color: white; 
+            background-color: map-get($colors, color_link);
+            border: none;
+
+        }
+
+        .input_search_posts{
+            padding-left: 1rem;
+            border-top-left-radius: 25px;
+            border-bottom-left-radius: 25px;
+            width: 60%;
+        }
+
+        .button_search_post{
+            padding-right: 1rem;
+            border-top-right-radius: 25px;
+            border-bottom-right-radius: 25px;
+        }
+        .button_search_post:active{
+            color: black;
+        }
+
+    }
+
+    .a_presentation:before{
+        content:' ';
+        display:block;
+        border: 1px rgba(194, 194, 194, 0.432) solid;
+
+    }
+
+    .a_presentation{
+        margin: 0 2rem 4rem;
+        .a_div_img{
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            margin: 2rem;
+        }
+        h2{
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        h2, p{
+            text-align: center;
+        }
+        .a_list_icons{
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    .a_main_division:before{
+        content:' ';
+        display:block;
+        border: 1px rgba(194, 194, 194, 0.432) solid;
+    }
+
+    .a_main_division{
+        margin: 0 2rem;
+        padding-bottom: 3rem;
+    }
+
+    .a_popular_posts_div_h2{
+
+        margin: 3rem 0;
+        background-color: map-get($colors, color_link);
+        color: white;
+        text-transform: capitalize;
+        font-weight: bold;
+        height: 3rem;
+        width: 100%;
+        @include flex_center_center;
+    }
+
+    .a_popular_posts_div_one_post{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        margin: 2rem 0;
+
+        .a_description_post{
+            margin-left: 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            h3{
+                font-weight: bold;
+            }
+            time{
+                float: bottom;
+                color: map-get($colors, color_text);
+            }
+        }
+
+    }
+
+    .a_div_with_line_after:after{
+        content:' ';
+        display:block;
+        border: 1px rgba(194, 194, 194, 0.432) solid;
+    }
+
+    .a_div_add{
+        width: 100%;
+        height: 300px;
+        margin-left: auto;
+        margin-right: auto;
+        @include flex_center_center;
+
+    }
+    table{
+        width: 100%;
+        color: map-get($colors, color_text);
+        tr{
+            border-bottom: 1px black dotted;
+            height: 3em;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
+        }
+        td{
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+        }
+    }
+    .form_newsletter{
+        margin: 1.5rem 0;
+        .input_newsletter, .button_newsletter{
+            height: 3rem;
+        }
+        .input_newsletter{
+            width: 70%;
+            color: map-get($colors, color_text);
+            padding-left: 1rem;
+        }
+        .button_newsletter{
+            width: 30%;
+            border: none;
+            color: white;
+            background-color: map-get($colors, color_link);
+        }
+    }
+    .a_list_tags{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        a{
+            margin-top: 0.5rem;
+            margin-right: 0.5rem;
+            color: black;
+            text-decoration: none;
+        }
+        .a_tag_clouds_tag{
+            border: 1px rgba(194, 194, 194, 0.432) solid;
+            padding: 1rem;
+
+        }
+    }
+
+
+}
+
+
+@media only screen and (min-width: 540px) {
+.asside_blog{
+    margin-left: 2rem;
+}
+.a_popular_posts_div_one_post{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 2rem 0;
+    img{
+        width: 30%;
+        height: 50px;
+    }
+    h3{
+        font-size: 1rem;
+    }
+    p{
+        line-height: 1;
+    }
+}
+
+.asside_blog .form_search_post .input_search_posts, .asside_blog .form_search_post .button_search_post{
+    height: 2rem;
+}
+
+
+}

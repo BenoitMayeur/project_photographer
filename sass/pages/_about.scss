@@ -1,0 +1,239 @@
+.banner_top_page{
+    height: 20rem;
+    background-image: linear-gradient(to right, map-get($colors, back_color_graduation1) , map-get($colors, back_color_graduation2));
+    color: white;
+    text-transform: capitalize;
+    h1{
+        font-size: 3.5rem;
+        font-weight: bold;
+        margin-bottom: 1.5rem;
+        text-align: center;
+        line-height: 1.2;
+    }
+}
+
+.div_top_page{
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h1, h2{
+        color: white;
+    }
+}
+
+.m_this_is_me_photo_border{
+    min-height: 300px;
+    @include background_image_whole_cover('../images/me-and-cookies.png');
+    width: 70%;
+    margin-top: 4rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.m_this_is_me_photo_finger{
+    min-height: 270px;
+    @include background_image_whole_cover('../images/me-outside.png');
+    margin-top: 10rem;
+    margin-bottom: 1.5rem;
+}
+
+.m_about_me_last_p{
+    margin-top: 1.5rem;
+}
+
+.m_skills{
+    padding-bottom: 4rem;
+}
+
+.m_skills_main_title{
+    font-weight: bold;
+    text-transform: capitalize;
+    font-size: 1.4rem;
+    margin: 3rem 0;
+}
+
+.m_skills_main_div{
+    margin-bottom: 2rem;
+}
+
+.m_skills_title_percents{
+    display: flex;
+    justify-content: flex-end;
+    strong{
+        color: map-get($colors, color_text); 
+        margin-bottom: 0.5rem;  
+    }
+}
+
+.m_line_percent_back{
+    background-color: rgb(222, 221, 221);
+    height: 1rem;
+    border: solid 0.2rem rgb(239, 238, 238);
+    border-radius: 25px;
+    .m_line_percent_front{
+        height: 0.6rem;
+        background-image: linear-gradient(to right, map-get($colors, back_color_graduation1) , map-get($colors, back_color_graduation2));
+        border-radius: 25px;
+    }
+    .after_effects{
+        width: 85%;
+    }
+    .sublime{
+        width: 95%;
+    }
+    .photoshop{
+        width: 90%;
+    }
+    .sketch{
+        width: 85%;
+    }
+    .illustrator{
+        width: 70%;
+    }
+}
+
+.m_section_feedback{
+    background-color:  map-get($colors, back_color_second);   
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+}
+
+
+
+.m_feedback_comment{
+    display: flex;
+    background-color:  map-get($colors, back_color_main);   
+    padding: 2rem;
+    .m_feedback_comment_div_text{
+        p{
+            margin-bottom: 1rem;
+        }
+        .comment_name{
+            font-weight: bold;
+            font-size: 1.2rem;
+            line-height: 2;
+        }
+    }
+
+}
+
+.m_feedback_comment_div_img{
+    padding-right: 1.5rem;
+}
+
+.comment_not_visible{
+    display: none;
+}
+
+.m_personal_description{
+    margin-top: 5rem;
+    p{
+        margin-bottom: 1rem;
+    }
+}
+
+.m_widgets_background{
+    transition: transform .2s;
+}
+
+.m_widgets_background:hover{
+    transform: scale(1.1);
+
+}
+
+.m_photo_about_me{
+    display: flex;
+    justify-content: center;
+}
+
+.m_image_about{
+    width: 15rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+}
+
+.m_p_about{
+    text-align: justify;
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 540px) {
+
+    .banner_top_page{
+        margin-bottom: 4rem;
+    }
+
+    .big_div_skills{
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+
+    .m_feedback{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1.5rem;
+        padding: 0rem 2rem;
+        max-width: 1140px;
+
+        .m_div_title_section{
+            grid-column: 1/3;
+        }
+        
+    }
+
+    .comment_not_visible{
+        display: flex;
+    }
+
+    .m_wrap{
+        max-width: 1140px;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (min-width: 768px) {
+    .m_this_is_me_photo_border{
+        margin-top: 0;
+        min-height: 300px;
+    }
+
+
+
+    .m_about_me{
+        margin-top: 8rem;
+        margin-bottom: 5rem;
+    }
+
+    .m_this_is_me_photo_finger{
+        margin-top: 0;
+        min-height: 300px;
+    }
+}
+
+
+@media only screen and (min-width: 992px) {
+    .m_this_is_me_photo_border{
+        min-height: 400px;
+    }
+    
+    .m_this_is_me_photo_finger{
+        margin-top: 0;
+        min-height: 18rem;
+        width: 20rem;
+    }
+
+    .m_image_about{
+        width: 18rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        border-radius: 10px;
+    }
+
+} 

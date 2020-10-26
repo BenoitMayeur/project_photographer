@@ -1,0 +1,315 @@
+/*ASIDE
+
+The css for the aside part is in the folder "layout", file "aside.scss"
+
+*/
+
+
+/*
+    On the page blog, there is a banner at the top. The image background is darker
+        => there is a dark filter on the image
+            => explainations in the part ".m_blog_banner"
+
+    AND for the smartphone you see only a part of the background image, but you see the whole photo
+        for the tablet and the computer versions
+            => for the smartphone there is no "background-size: 100% 100%;" in ".m_blog_banner"
+                BUT there is this line for the tablet/computer versions
+*/
+.m_blog_banner{
+    /* Code under: add a filter to the background-image */ 
+    background: 
+    linear-gradient(
+        rgba(61, 61, 61, 0.45), 
+        rgba(61, 61, 61, 0.45), 
+    ),
+    // Je suis tombé sur des articles qui disaient que ça n'était pas possible de
+    // mettre un filtre de couleur directement sur une image en background.
+    // Mais dans cet article: https://css-tricks.com/apply-a-filter-to-a-background-image/
+    // L'auteur proposait de faire un linear-gradient de couleur et d'utiliser la propriété 'background-blend-mode'
+    // J'ai fait un test, mais l'auteur utilisait deux fois le noir "pur" dans un linear-gradient
+    // J'ai refait un test en utilisant des couleurs transparentes et ça marchait,
+    // mais sans le 'background-blend-mode'. Je l'ai donc gardé comme ça.
+    // Je ne connaissais pas la propriété 'background-blend-mode' 
+    // et j'ai vérifié sur canIuse, et la propriété est supportée 
+    // par la plupart des navigateurs sauf Opera Mini et Internet Explorer,
+    // donc en théorie j'aurais pu l'utiliser sans trop de risque.
+
+    /* Image itself */
+    url("../images/blog/swan.jpg") no-repeat center center;
+    height: 23rem;
+    max-width: 2800px;
+    margin-left: auto;
+    margin-right: auto;
+    @include flex_center_center;
+    color: white;
+    text-align: center;
+
+    h1{
+        font-weight: bold;
+        font-size: 2.2rem;
+        margin-bottom: 2rem;
+    }
+
+    p{
+        color: white;
+        margin-bottom: 1.5rem;
+    }
+
+    .m_blog_banner_div_center{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h1{
+            color: white;
+        }
+        p{
+            font-weight: bold;
+        }
+    }
+
+    .m_blog_banner_link{
+        text-decoration: none;
+    }
+
+    .m_blog_banner_button{
+        height: 3rem;
+        padding: 0 2rem;
+        background-color: rgb(255, 255, 255);
+        color: black;
+        text-transform: capitalize;
+        @include flex_center_center;
+        font-weight: 600;
+    }
+}
+
+.section_widgets{
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+.section_widgets_div_social{
+    height: 15rem;
+    @include flex_center_center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    @include background_image_whole_cover('../images/blog/meeting.jpg');
+
+    a{
+        text-decoration: none;
+    }
+}
+
+.section_widgets_div_nature{
+    height: 15rem;
+    @include flex_center_center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    @include background_image_whole_cover('../images/blog/nature.jpg');
+
+    a{
+        text-decoration: none;
+    }
+}
+
+.section_widgets_div_art{
+    height: 15rem;
+    @include flex_center_center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    @include background_image_whole_cover('../images/blog/art.jpg');
+
+    a{
+        text-decoration: none;
+    }
+}
+
+.m_widgets_background{
+
+    background-color: rgba(0, 0, 0, 0.692);
+    width: 20rem;
+    height: 10rem;
+    @include flex_center_center;
+    flex-direction: column;
+    h1, p{
+        text-decoration: none;
+        color: white;
+    }
+    h1{
+        font-weight: 700;
+        font-size: 1.3rem;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+    }
+    p{
+        line-height: 2rem;
+    }
+    p:before{
+        content:' ';
+        display:block;
+        border: 1px solid rgb(255, 255, 255);
+
+    }
+}
+
+
+    .m_articles_tags{
+        margin-bottom: 2rem;
+        text-transform: capitalize;
+
+    }
+
+    .m_articles_tags_div_details{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1rem;
+        margin: 1rem 0;
+        color: map-get($colors, color_text);
+        span, i{
+            color: black;
+        }
+    }
+
+    .m_blog_article_h2{
+        margin: 2rem 0;
+        a{
+            color: black;
+            font-size: 1.8rem;
+            text-transform: capitalize;
+            text-decoration: none;
+            font-weight: 600;
+            line-height: 2rem;
+        }
+    }
+    
+.m_blog_article_div_a{
+    margin: 2rem;
+    a{
+        text-decoration: none;
+        text-transform: capitalize;
+        font-weight: 600;
+        color: black;
+    }
+
+}
+
+.m_blog_article_div_a:hover{
+    color: red;
+//    transform: scaleY(1.2);
+}
+
+.big_div_pagination{
+    @include flex_center_center;
+    margin-top: 7rem;
+    margin-bottom: 7rem;
+}
+
+.div_pagination{
+    @include flex_center_center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.pagination_page{
+    @include flex_center_center;
+    height: 3rem;
+    width: 3rem;
+    background-color: rgb(255, 255, 255);
+    color: map-get($colors, color_text);
+    .pagination_page_link{
+        width: 100%;
+    }
+}
+
+.pagination_page_link{
+    text-decoration: none;
+}
+
+.pagination_page.current_page{
+    background-color: map-get($colors, color_link);
+    color: white;
+}
+
+
+@media only screen and (min-width: 600px) {
+
+    .m_blog_banner{
+        /* For the smartphone you see only a part of the photo, but you see the whole photo
+        for the tablet and the computer versions */
+        background: 
+        /* You have to repeat the whole background property to change a part of it 
+        => the linear gradient is a second time here */
+        linear-gradient(
+          rgba(61, 61, 61, 0.45), 
+          rgba(61, 61, 61, 0.45), 
+        ),
+        /* Here the image is centered */
+        url("../images/blog/swan.jpg") no-repeat center center;
+        background-size: 100% 100%;
+        height: 30rem;
+    }
+
+    .section_widgets_div_social, .section_widgets_div_nature, .section_widgets_div_art{
+
+        margin-right: 2rem
+    }
+
+    .m_widgets_background{
+        width: 10rem;
+        height: 8rem;
+        text-align: center;
+        h1{
+            font-weight: 700;
+            font-size: 1rem;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+        p{
+            line-height: 2rem;
+        }
+    }
+
+
+    .m_article_alone{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 3fr 10fr;
+        grid-gap: 20px;
+
+    }
+    .m_blog_article_h2{
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+    .m_blog_article_p{
+        grid-column: 2/3;
+        grid-row: 3/4;
+    }
+    .m_blog_article_div_a{
+        grid-column: 2/3;
+        grid-row: 4/5;
+    }
+
+    .m_articles_tags{
+        margin-bottom: 2rem;
+        text-transform: capitalize;
+        text-align: right;
+    }
+
+    .m_articles_tags_div_details{
+        display: block;
+    }
+    .m_articles_tags_details{
+        text-align: right;
+        margin-bottom: 1rem;
+    }
+}
+@media only screen and (min-width: 992px) {
+    .m_blog_banner{
+        height: 45rem;
+    }
+    .m_widgets_background{
+        width: 20rem;
+    }
+}
+

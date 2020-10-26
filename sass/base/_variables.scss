@@ -1,0 +1,32 @@
+/*
+    There are two colors of background, a white and a very light grey not visible on every screen
+    => back_color_main and back_color_second
+*/
+
+$colors: (
+    back_color_main: #fff,
+    back_color_second: #faf9ff,
+    color_title: #222222,
+    color_text: #777777,
+    color_link: #edc587,
+    back_color_graduation1: rgb(255, 229, 153),
+    back_color_graduation2: #cbcbcb,
+    back_color_footer: black,
+    border_color: rgb(185, 184, 184)
+);
+
+@mixin background_image_whole_cover($image) {
+    background: url(#{$image}) no-repeat center center;
+    background-size: 100% 100%;
+  };
+
+@mixin flex_center_center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+  

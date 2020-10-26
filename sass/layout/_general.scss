@@ -1,0 +1,29 @@
+*{
+    box-sizing: border-box;
+}
+
+html, input, textarea{
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+}
+
+body{
+    background-color: map-get($colors, back_color_main);
+}
+
+img{
+    max-width: 100%;
+}
+
+p, legend{
+    color: map-get($colors, color_text);
+    line-height: 1.6;
+}
+
+strong{
+    font-weight: normal;
+}
+
+h1, h2, h3{
+    color: map-get($colors, color_title);
+}

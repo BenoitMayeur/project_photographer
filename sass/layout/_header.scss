@@ -1,0 +1,144 @@
+.main_header{
+    margin: 1rem 0.5rem;
+}
+
+.h_logo{
+  width: 10rem;
+  border-radius: 5px;
+}
+
+.h_big_div{
+    display: flex;
+    justify-content: space-between;
+    a{
+        height: 100%;
+    }
+    .h_menu_hamburger{
+        display: flex;
+        flex-direction: column;
+        transition: 0.5s;
+
+    }
+
+    .line_menu_hamburger{
+        background-color: black;
+        width: 30px;
+        height: 3px;
+        margin-top: 5px;
+    }
+
+    .h_nav{
+        display: none;
+    }
+}
+
+/* The side navigation menu */
+.h_div_menu {
+    width: 0; 
+    position: fixed; 
+    z-index: 2; 
+    top: 0;
+    left: 0;
+    display: flex;
+    overflow-x: hidden;
+    overflow-y: hidden; 
+    transition: 0.5s;
+  }
+
+  /* The navigation menu links */
+  .h_div_menu .h_main_nav_link {
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: white;
+    display: block;
+    padding-left: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .h_main_nav_link.current_page{
+    color: map-get($colors, color_link);
+}
+
+// The button .closeButton slowly vanishes when you close the menu on smartphone
+// => transition: 0.3 in the part ".h_div_menu .closeButton"
+
+  .h_div_menu .closeButton {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 3rem;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    transition: 0.3s;
+  }
+
+
+.h_main_nav{
+    width: 70vw;
+    background: rgba(10, 0, 0, 0.9);
+    padding-top: 2rem;
+}
+
+.h_div_side_nav{
+    width: 30vw;
+    height: 100vh;
+    background: rgba(10, 0, 0, 0.5);
+}
+
+.visible{
+    width: 100vw;
+}
+  
+.h_big_div .remove_button{
+    opacity: 0;
+}
+
+@media only screen and (min-width: 768px){
+  .h_big_div .h_menu_hamburger{
+      display: none;
+  }
+
+  .h_big_div .h_div_menu{
+      width: 100%;
+      position: static;
+      z-index: 0;
+      display: flex;
+      justify-content: flex-end;
+  }
+
+  .h_div_side_nav{
+      display: none;
+  }
+
+  .h_main_nav {
+      background-color: map-get($colors, back_color_main);
+      padding-top: 0;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      ul{
+        display: flex;
+        justify-content: flex-end;
+      li{
+        margin-left: 2rem;
+      }
+    
+    }
+  }
+
+.h_div_menu .h_main_nav_link{
+    display: inline;
+    color: black;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1rem;
+  }
+
+  .h_main_nav_link.current_page{
+    color: map-get($colors, color_link);
+  }
+}
