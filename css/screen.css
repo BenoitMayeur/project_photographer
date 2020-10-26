@@ -620,6 +620,11 @@ h1, h2, h3 {
   padding: 1rem;
 }
 
+.a_image_posts {
+  width: 12rem;
+  height: 10rem;
+}
+
 @media only screen and (min-width: 540px) {
   .asside_blog {
     margin-left: 2rem;
@@ -751,8 +756,8 @@ h1, h2, h3 {
   font-size: 1.2rem;
 }
 
-.image_projet {
-  height: 100%;
+.image_project {
+  height: 20rem;
   border-radius: 5px;
 }
 
