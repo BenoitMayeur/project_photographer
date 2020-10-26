@@ -33,7 +33,7 @@
 }
 
 .image_project{
-    height: 20rem;
+    width: 20rem;
     border-radius: 5px;
 }
 
@@ -319,6 +319,11 @@
 }
 
 @media (min-width: 768px) {
+
+    .image_project{
+        height: 100%;
+        border-radius: 5px;
+    }
 
     .m_services_card{
         margin-right: 0.5rem;
